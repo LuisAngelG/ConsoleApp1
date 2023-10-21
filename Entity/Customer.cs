@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    internal class Customer
+    public class Customer
     {
         public int Customer_Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set;}
-        public string Phone { get; set; }
-        public string Active { get; set;}
-    
+        public string Phone { get; set; }    
     
     }
 }

@@ -8,7 +8,7 @@ namespace Data
 {
     public class DProduct
     {
-        private string connectionString = "Data Source = SQLCLIENT; Initial Catalog = LAB1504-11; User ID = tecsup123; Password=123456";
+        private string connectionString = "Data Source=LAB1504-11\\SQLEXPRESS;Initial Catalog=Facturas;User ID=tecsup;Password=123456";
 
         public List<Product> GetProducts()
         {
@@ -18,7 +18,7 @@ namespace Data
             {
                 // Abrir la conexión
                 connection.Open();
-                string query = "listar_customer";
+                string query = "listar_products";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -34,7 +34,7 @@ namespace Data
                                 products.Add(new Product
                                 {
                                     Product_Id = Convert.ToInt32(reader["product_id"]),
-                                    Name = reader["NombreContacto"].ToString(),
+                                    Name = Convert.ToString(reader["name"]),
                                     Price = Convert.ToDouble(reader["price"]),
                                     Stock = Convert.ToInt32(reader["stock"])
                                 });

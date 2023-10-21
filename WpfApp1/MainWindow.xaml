@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Margin="328,90,328,318"><Run Language="es-es" Text="Listar Products"/><LineBreak/><Run Language="es-es"/></TextBlock>
-        <TextBox x:Name="TextBoxNombreProducto" Margin="328,121,365,287"></TextBox>
-        <Button Content="Buscar" Margin="328,166,304,240" Click="Button_Click"></Button>
-        <ListView x:Name="listViewResultados" Margin="194,217,170,70">
+        <TextBlock Margin="167,0,489,366" Height="26" VerticalAlignment="Bottom"><Run Language="es-es" Text="Listar Customer"/><LineBreak/><Run Language="es-es"/></TextBlock>
+        <TextBox x:Name="TextBoxNombreCustomer" Margin="167,0,526,335" Height="26" VerticalAlignment="Bottom"></TextBox>
+        <Button Content="Buscar" Margin="167,0,465,288" Click="Button_Click" Height="29" VerticalAlignment="Bottom"></Button>
+        <ListView x:Name="listViewResultados" Margin="33,0,331,118" Height="147" VerticalAlignment="Bottom">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ProductId" DisplayMemberBinding="{Binding ProductId}"></GridViewColumn>
+                    <GridViewColumn Header="CustomerId" DisplayMemberBinding="{Binding Customer_Id}"></GridViewColumn>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
-                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}"></GridViewColumn>
-                    <GridViewColumn Header="Stock" DisplayMemberBinding="{Binding Stock}"></GridViewColumn>
+                    <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}"></GridViewColumn>
+                    <GridViewColumn Header="Phone" DisplayMemberBinding="{Binding Phone}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

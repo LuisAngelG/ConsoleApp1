@@ -24,20 +24,20 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
 
-        private BProduct productBusiness;
+        private BCustomer customerBussiness;
         public MainWindow()
         {
             InitializeComponent();
-            productBusiness = new BProduct();
+            customerBussiness = new BCustomer();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string productName = TextBoxNombreProducto.Text;
+            string customerName = TextBoxNombreCustomer.Text;
 
-            List<Product> products = productBusiness.GetByName(productName);
+            List<Customer> customers = customerBussiness.GetByName(customerName);
 
-            listViewResultados.ItemsSource = products;
+            listViewResultados.ItemsSource = customers;
         }
     }
 }
